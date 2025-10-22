@@ -1,0 +1,4 @@
+# Entornos de Python
+.venv/
+.vscode/
+.env
