@@ -19,12 +19,12 @@ Para cada posición del kernel sobre la imagen:
 2. Se hace **multiplicación elemento a elemento**.
 3. Se **suman** los productos y se escribe el resultado en la salida.
 
-Formalmente, para una posición $(i, j)$:
+Formalmente, para una posición $(i,j)$:
+
 $$
-[
-(I * K)[i,j] = \sum_{u=-a}^{a} \sum_{v=-b}^{b} I[i+u, j+v] \cdot K[u,v]
-]
+(I * K)_{i,j} = \sum_{u=-a}^{a}\sum_{v=-b}^{b} I_{i+u,\,j+v}\,K_{u,v}
 $$
+
 
 donde $(a,b)$ dependen del tamaño del kernel (por ejemplo, $(a=b=1)$ para 3×3).
 
