@@ -2,3 +2,8 @@
 .venv/
 .vscode/
 .env
+
+# Carpetas de datos
+07_Red_Neuronal_MNIST/data/
+08_Metricas_Evaluacion_MNIST/data/
+09_Convolucion2D_y_Filtros/data/
