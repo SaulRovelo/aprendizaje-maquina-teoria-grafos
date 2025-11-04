@@ -21,9 +21,11 @@ Para cada posición del kernel sobre la imagen:
 
 Formalmente, para una posición $(i, j)$:
 $$
+[
 (I * K)[i,j] = \sum_{u=-a}^{a} \sum_{v=-b}^{b} I[i+u, j+v] \cdot K[u,v]
-
+]
 $$
+
 donde $(a,b)$ dependen del tamaño del kernel (por ejemplo, $(a=b=1)$ para 3×3).
 
 **Padding (relleno)** controla el tamaño de la salida:  
