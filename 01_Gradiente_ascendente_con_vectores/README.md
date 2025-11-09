@@ -174,22 +174,6 @@ que se utilizaría con conjuntos de datos más grandes y reales.
 
 ------------------------------------------------------------------------
 
-## 6. Conclusión
-
-Este notebook muestra cómo:
-
--   Las operaciones básicas con vectores y matrices en NumPy permiten
-    implementar métodos de optimización de forma compacta.
--   La función sigmoide conecta modelos lineales con interpretaciones
-    probabilísticas.
--   El gradiente ascendente se implementa de manera directa usando
-    álgebra lineal, sin perder la relación con su formulación teórica.
-
-El código sirve como puente entre la teoría presentada en clase y una
-implementación concreta, clara y reproducible.
-
-------------------------------------------------------------------------
-
 ## Referencias
 
 -   Robles, I. *Aprendizaje de Máquina Aplicado a Teoría de Gráficas*.
