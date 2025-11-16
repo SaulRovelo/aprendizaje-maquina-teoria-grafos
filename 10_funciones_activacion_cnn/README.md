@@ -1,7 +1,7 @@
-# 🧩 Comparación de Funciones de Activación en Redes Convolucionales (CNN)
+# Comparación de Funciones de Activación en Redes Convolucionales (CNN)
 
 
-## 🎯 **Propósito**
+## **Propósito**
 
 Este notbook busca **analizar y comparar** cómo distintas **funciones de activación** afectan el **aprendizaje y desempeño** de una red neuronal convolucional (CNN) profunda entrenada sobre el conjunto de datos **MNIST** (dígitos escritos a mano).
 
@@ -13,7 +13,7 @@ A través de un experimento controlado, se entrenan **tres modelos idénticos** 
 
 ---
 
-## 🧠 **Contexto teórico**
+## **Contexto teórico**
 
 ### 🔹 ¿Qué es una función de activación?
 
@@ -36,7 +36,7 @@ Cada una impacta de forma distinta la propagación del gradiente y la velocidad 
 
 ---
 
-## 🧮 **Estructura del experimento**
+## **Estructura del experimento**
 
 1. **Dataset:**  
    Se utiliza **MNIST**, un conjunto con 70,000 imágenes en escala de grises (28×28 px) de dígitos del 0 al 9.  
@@ -63,18 +63,18 @@ Cada una impacta de forma distinta la propagación del gradiente y la velocidad 
 
 ---
 
-## ⚙️ **Flujo general del código**
+## **Flujo general del código**
 
-1️⃣ Cargar librerías y configurar PyTorch  
-2️⃣ Descargar y normalizar el dataset MNIST  
-3️⃣ Definir el modelo CNN (build_deep_cnn_model)  
-4️⃣ Implementar funciones de entrenamiento y evaluación  
-5️⃣ Ejecutar el bucle de comparación (ReLU, Tanh, Sigmoid)  
-6️⃣ Mostrar resultados finales  
+1️. Cargar librerías y configurar PyTorch  
+2️. Descargar y normalizar el dataset MNIST  
+3️. Definir el modelo CNN (build_deep_cnn_model)  
+4️. Implementar funciones de entrenamiento y evaluación  
+5️. Ejecutar el bucle de comparación (ReLU, Tanh, Sigmoid)  
+6️. Mostrar resultados finales  
 
 ---
 
-## 📊 **Resultados esperados**
+## **Resultados esperados**
 
 | Activación | Tiempo (s) | Precisión (%) | Comportamiento |
 |-------------|-------------|----------------|----------------|
@@ -86,7 +86,7 @@ Cada una impacta de forma distinta la propagación del gradiente y la velocidad 
 
 ---
 
-## 🧩 **Conclusiones**
+## **Conclusiones**
 
 - La **ReLU** domina en redes profundas: simple, eficiente y evita saturación.  
 - **Tanh** funciona bien en redes pequeñas o con datos centrados en cero.  
@@ -95,7 +95,7 @@ Cada una impacta de forma distinta la propagación del gradiente y la velocidad 
 
 ---
 
-✍️ **Autor:**  
+**Autor:**  
 Saúl Rovelo López  
 Universidad Autónoma Metropolitana – Unidad Cuajimalpa  
 Curso: *Aprendizaje de Máquina aplicado a Teoría de Gráficas*

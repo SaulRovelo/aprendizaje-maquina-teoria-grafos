@@ -1,12 +1,12 @@
-# 🧠 Red Neuronal para Reconocimiento de Imágenes (MNIST 0 y 1)
+# Red Neuronal para Reconocimiento de Imágenes (MNIST 0 y 1)
 
 Este notebook implementa una **red neuronal simple en PyTorch** para reconocer los dígitos **0 y 1** del conjunto **MNIST**, un clásico dataset que contiene imágenes de números escritos a mano. Se muestra cómo preparar los datos, definir el modelo, entrenarlo y evaluar su desempeño.
 
 ---
 
-## 📘 Conceptos generales
+## Conceptos generales
 
-### 🔹 Tensores
+### Tensores
 
 En PyTorch, toda la información —imágenes, etiquetas, pesos y gradientes— se representa como **tensores**.  
 Un tensor es una estructura parecida a un arreglo de Numpy, pero optimizada para operaciones en GPU, lo que permite acelerar el entrenamiento.  
@@ -21,7 +21,7 @@ donde:
 
 ---
 
-### 🔹 Máscara de datos
+### Máscara de datos
 
 El conjunto MNIST contiene imágenes de los dígitos del **0 al 9**, pero este notebook se enfoca en un **problema binario**: reconocer solo los dígitos **0 y 1**.  
 
@@ -35,7 +35,7 @@ Esto simplifica el problema de clasificación, reduciéndolo a dos clases posibl
 
 ---
 
-### 🔹 Características (X) y Etiquetas (Y)
+### Características (X) y Etiquetas (Y)
 
 - **Características (X):** son las imágenes de entrada, es decir, los píxeles del número escrito.  
 - **Etiquetas (Y):** son las salidas esperadas o respuestas correctas del modelo (`0` o `1`).
@@ -44,7 +44,7 @@ Ambos se convierten a tipo **float** (`.float()`) para que puedan ser procesados
 
 ---
 
-### 🔹 Aplanamiento (Flatten)
+### Aplanamiento (Flatten)
 
 Cada imagen original de 28x28 píxeles se transforma en un vector de **784 valores** (`28*28`).  
 Este proceso, llamado **aplanamiento**, permite conectar todos los píxeles directamente a la capa de entrada de la red neuronal.
@@ -59,7 +59,7 @@ De esta forma, cada imagen se convierte en una lista lineal de características 
 
 ---
 
-## ⚙️ Definición del modelo y entrenamiento
+## Definición del modelo y entrenamiento
 
 El modelo se define con `nn.Sequential()`, una forma sencilla de construir redes en PyTorch agregando capas de manera secuencial.  
 En este caso, el flujo del modelo es el siguiente:
@@ -85,7 +85,7 @@ Este procedimiento permite que el modelo minimice la pérdida y mejore su precis
 
 ---
 
-## 🧾 Evaluación y pruebas individuales
+## Evaluación y pruebas individuales
 
 Una vez entrenado, el modelo se pone en modo evaluación con `modelo.eval()`.  
 Durante esta fase, se desactiva el cálculo de gradientes (`torch.no_grad()`) para hacer el proceso más rápido y eficiente.
@@ -103,7 +103,7 @@ Esto permite observar de manera visual cómo el modelo clasifica ejemplos reales
 
 ---
 
-## 🧮 Funciones y módulos usados
+## Funciones y módulos usados
 
 - **`transforms.ToTensor()`** → convierte las imágenes en tensores y normaliza los valores a 0–1.  
 - **`datasets.MNIST()`** → carga o descarga el conjunto de datos MNIST.  
@@ -124,7 +124,7 @@ Esto permite observar de manera visual cómo el modelo clasifica ejemplos reales
 
 ---
 
-## ✨ Conclusión
+## Conclusión
 
 Este notebook demuestra el ciclo completo de una red neuronal simple:  
 **cargar, preparar, entrenar, evaluar y probar** un modelo de aprendizaje supervisado.  

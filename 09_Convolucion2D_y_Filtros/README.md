@@ -1,4 +1,4 @@
-# 🧩 Convolución 2D en imágenes
+# Convolución 2D en imágenes
 
 Este notebook demuestra **cómo funciona la operación de convolución** en imágenes usando **PyTorch** y **torchvision** con dos ejemplos:  
 1) una **matriz 6×6** sencilla para entender la mecánica, y  
@@ -6,13 +6,13 @@ Este notebook demuestra **cómo funciona la operación de convolución** en imá
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 - Comprender **qué es la convolución**, cómo se **aplica un kernel** y qué efecto produce (bordes, suavizado, realce).
 - Relacionar la operación con lo que hacen las **CNN** para **extraer características**.
 
 ---
 
-## 🧠 ¿Qué es la convolución?
+## ¿Qué es la convolución?
 La **convolución 2D** combina una imagen $(I)$ con un **kernel** $(K)$ (matriz pequeña como 3×3).  
 Para cada posición del kernel sobre la imagen:
 1. Se alinean sus celdas con los píxeles vecinos.
@@ -36,7 +36,7 @@ donde $(a,b)$ dependen del tamaño del kernel (por ejemplo, $(a=b=1)$ para 3×3)
 
 ---
 
-## 🔁 Flujo del proceso (resumen)
+## Flujo del proceso (resumen)
 1. **Preparación de datos**  
    - Convertimos la imagen a **tensor** y (opcionalmente) a **escala de grises** (1 canal).
    - Ajustamos dimensiones a **(N, C, H, W)** para `Conv2d`.
@@ -48,28 +48,28 @@ donde $(a,b)$ dependen del tamaño del kernel (por ejemplo, $(a=b=1)$ para 3×3)
    - Mostramos **imagen original** y **resultado** para interpretar efectos.
 
 ---
-## 🧪 Ejemplos incluidos
+## Ejemplos incluidos
 
-### 🧮 1) Matriz 6×6 (toy example)
+### 1. Matriz 6×6 (toy example)
 
 -   Imagen: franja vertical de intensidad alta (`10`) y el resto `0`.\
 -   Kernel: `[[1, 0, -1], [1, 0, -1], [1, 0, -1]]` (bordes verticales).\
 -   Sin padding (`padding=0`) → salida de **4×4**.
 
-🔍 **Qué se observa:** - Los valores grandes aparecen **donde hay cambio
+**Qué se observa:** - Los valores grandes aparecen **donde hay cambio
 brusco** (de 10 a 0).\
 - Las regiones uniformes (todo 10 o todo 0) generan salida ≈ 0.\
 - Es un ejemplo ideal para **ver cómo se "mueve" el kernel** y por qué
 la salida cambia de tamaño.
 
-🧩 **Interpretación:**\
+**Interpretación:**\
 La convolución actúa como un detector de transición: el signo (+/--) del
 resultado indica **la dirección del contraste** (claro→oscuro o
 viceversa).
 
 ------------------------------------------------------------------------
 
-### 👕 2) FashionMNIST (28×28)
+### 2. FashionMNIST (28×28)
 
 -   Dataset: conjunto de prendas en escala de grises (0--255 →
     normalizado 0--1).\
@@ -81,13 +81,13 @@ viceversa).
         oblicuos.\
 -   `padding=1` → la salida mantiene 28×28.
 
-🔍 **Qué se observa:** - Sobel Horizontal destaca los **contornos
+**Qué se observa:** - Sobel Horizontal destaca los **contornos
 horizontales del abrigo** (hombros y parte inferior).\
 - Sobel Vertical resalta los **bordes laterales** de la prenda.\
 - El filtro Diagonal muestra líneas suaves en ángulo, **combinando
 direcciones**.
 
-📊 **Análisis:** - Cada filtro capta una **orientación distinta** de los
+**Análisis:** - Cada filtro capta una **orientación distinta** de los
 bordes.\
 - En redes convolucionales, estos mapas (feature maps) se combinan y
 profundizan capa a capa para construir una **representación jerárquica**
@@ -95,9 +95,9 @@ de la imagen (de bordes → texturas → formas → objetos).
 ---
 
 
-## 🛠️ Funciones y clases usadas (qué hacen)
+## Funciones y clases usadas (qué hacen)
 
-### 🔹 Transformaciones y datasets
+### Transformaciones y datasets
 
 -   `transforms.Compose([...])`: encadena transformaciones.\
 -   `transforms.ToTensor()`: convierte a tensor y normaliza a `[0, 1]`.\
@@ -106,7 +106,7 @@ de la imagen (de bordes → texturas → formas → objetos).
 -   `torchvision.datasets.FashionMNIST(root, train, download, transform)`:
     descarga/carga el dataset.
 
-### 🔹 Tensores y convolución
+### Tensores y convolución
 
 -   `tensor.view(N, C, H, W)`: reinterpreta dimensiones sin copiar
     datos.\
@@ -119,7 +119,7 @@ de la imagen (de bordes → texturas → formas → objetos).
 -   `tensor.detach()`: desconecta del grafo de gradientes (para
     visualización).
 
-### 🔹 Visualización
+### Visualización
 
 -   `plt.figure(figsize=(w, h))`: define tamaño de la figura.\
 -   `plt.subplot(r, c, i)`: organiza imágenes en cuadrícula.\
@@ -128,7 +128,7 @@ de la imagen (de bordes → texturas → formas → objetos).
 -   `plt.tight_layout()`: ajusta espacios entre subplots.
 ---
 
-## 🧩 Interpretación de resultados
+## Interpretación de resultados
 - **Sobel Horizontal**: resalta cambios **arriba/abajo** → bordes horizontales.  
 - **Sobel Vertical**: resalta cambios **izquierda/derecha** → bordes verticales.  
 - **Diagonal/Prewitt**: marca **diagonales** y estructuras oblicuas.  
@@ -137,7 +137,7 @@ de la imagen (de bordes → texturas → formas → objetos).
 
 ---
 
-## ✅ Conclusión
+## Conclusión
 
 La **convolución 2D** es el corazón del procesamiento visual moderno.\
 Con un simple recorrido local y suma ponderada, se pueden **extraer
