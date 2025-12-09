@@ -15,7 +15,7 @@ A través de un experimento controlado, se entrenan **tres modelos idénticos** 
 
 ## **Contexto teórico**
 
-### 🔹 ¿Qué es una función de activación?
+### ¿Qué es una función de activación?
 
 Una **función de activación** define cómo una neurona transforma su entrada en salida.  
 Su objetivo es **introducir no linealidad**, permitiendo que la red neuronal aprenda **relaciones complejas** entre los datos.
@@ -24,7 +24,7 @@ Sin activaciones, una red sería solo una combinación lineal de sus entradas, i
 
 ---
 
-### 🔹 Tipos comparados en este experimento
+### Tipos comparados en este experimento
 
 | Activación | Ecuación | Rango | Ventajas | Desventajas |
 |-------------|-----------|--------|------------|--------------|
